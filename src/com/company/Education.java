@@ -17,20 +17,20 @@ public class Education  {
         this.major = major;
         this.univName = univName;
         this.gradYear = gradYear;
-        educationInfo();
+        //educationInfo();
     }
 
-    public void educationInfo() {
-        System.out.print("enter your Degree type : ");
-        setDegree(scan.nextLine());
-        System.out.println("enter your major");
-        setMajor(scan.nextLine());
-        System.out.println("enter school name");
-        setUnivName(scan.nextLine());
-        System.out.println("enter graduation year");
-        setGradYear(scan.nextInt());
-        scan.nextLine();
-    }
+//    public void educationInfo() {
+//        System.out.print("enter your Degree type : ");
+//        setDegree(scan.nextLine());
+//        System.out.println("enter your major");
+//        setMajor(scan.nextLine());
+//        System.out.println("enter school name");
+//        setUnivName(scan.nextLine());
+//        System.out.println("enter graduation year");
+//        setGradYear(scan.nextInt());
+//        scan.nextLine();
+//    }
 
     public void setDegree(String degree) {
 
@@ -66,7 +66,6 @@ public class Education  {
     }
     @Override
     public String toString(){
-        for ()
         return getDegree() + "in" + getMajor() + "\n" +getUnivName() + "," + getGradYear()+"\n";
     }
 }

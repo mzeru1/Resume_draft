@@ -15,18 +15,19 @@ public class Main {
 
 
     public static void main(String[] args) {
-    /*    //HashMap<Integer, String> resumeMap = new HashMap<Integer, String>();
+        //HashMap<Integer, String> resumeMap = new HashMap<Integer, String>();
         ArrayList<Person> pp = new ArrayList<Person>();
         Scanner scan = new Scanner(System.in);
         Person person1 = null;
         Education education;
-        String buildResume;
+        String buildResume = "";
         // ResumeDB res = new ResumeDB();
-        do{
-            // ArrayList<ResumeDB> s = new ArrayList<ResumeDB>();
-            System.out.println("Do you want to build a resume? Enter y or N");
-            buildResume = scan.nextLine();
 
+         boolean ido = true;
+         while (ido){
+            // ArrayList<ResumeDB> s = new ArrayList<ResumeDB>();
+             System.out.println("Do you want to Build a resume? Y OR N");
+             buildResume = scan.nextLine();
 
             // checks user input if building resume response was yes or no
             if (buildResume.equalsIgnoreCase("Y")) {
@@ -36,33 +37,30 @@ public class Main {
                 person1.setName(scan.nextLine());
                 System.out.println("enter email");
                 person1.setEmail(scan.nextLine());
-                person1.toString();
+                //person1.toString();
 
 
                 boolean addEducation = true;
                 while (addEducation) {
-                    education = new Education();
+                    //education = new Education();
                     System.out.print("enter your Degree type : ");
-                    education.setDegree(scan.nextLine());
+                    person1.education.setDegree(scan.nextLine());
                     System.out.println("enter your major");
-                    education.setMajor(scan.nextLine());
+                    person1.education.setMajor(scan.nextLine());
                     System.out.println("enter school name");
-                    education.setUnivName(scan.nextLine());
+                    person1.education.setUnivName(scan.nextLine());
                     System.out.println("enter graduation year");
-                    education.setGradYear(scan.nextInt());
+                    person1.education.setGradYear(scan.nextInt());
                     scan.nextLine();
-                    person1.addEducation(education);
-                    education.toString();
-                    person1.toString();
+                    person1.addEducation(person1.education);
+         //           education.toString();
+          //          person1.toString();
 
                     System.out.println("More education to add? Y or N ");
                     String choice = scan.nextLine();
                     if (!choice.equalsIgnoreCase("Y")) {
                         addEducation = false;
                         System.out.println("loop tester ...1");
-                    } else {
-                        System.out.println("loop tester ");
-
                     }
                 }
 
@@ -71,27 +69,28 @@ public class Main {
             }
             pp.add(person1);
         } while (buildResume.equalsIgnoreCase("y"));
+        System.out.println(pp.size());
         if(person1 != null){
             for(Person i : pp) {
-                i.toString();
+                i.toStrings();
             }
-        }*/
-        ArrayList<Person> pp = new ArrayList<Person>();
-        Scanner scan = new Scanner(System.in);
-        Person person1 = new Person();
-        System.out.println("enter name");
-        person1.setName(scan.nextLine());
-        System.out.println("enter your email");
-        person1.setEmail(scan.nextLine());
-        pp.add(person1);
-
-        //adding education now
-
-        System.out.println("fill the education form ed, dd,yega");
-        Education edu = new Education();
-        edu.educationInfo();
-        person1.add(edu);
-        edu.toString();
+        }
+//        ArrayList<Person> pp = new ArrayList<Person>();
+//        Scanner scan = new Scanner(System.in);
+//        Person person1 = new Person();
+//        System.out.println("enter name");
+//        person1.setName(scan.nextLine());
+//        System.out.println("enter your email");
+//        person1.setEmail(scan.nextLine());
+//        pp.add(person1);
+//
+//        //adding education now
+//
+//        System.out.println("fill the education form ed, dd,yega");
+//        Education edu = new Education();
+//        edu.educationInfo();
+//        person1.add(edu);
+//        edu.toString();
 
     }
 

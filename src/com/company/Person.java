@@ -9,6 +9,7 @@ public class Person {
     private ArrayList<Skill> skil_L = new ArrayList<Skill>();
     String name;
     String email;
+    Education education = new Education();
 
     public Person() {
 
@@ -74,11 +75,11 @@ public class Person {
         return skil_L;
     }
 
-    public String toString(){
-        String ret =  this.name + "\n" + this.email + "\n\n" + "Education";
+    public void toStrings(){
+        System.out.println( this.name + "\n" + this.email + "\n\n" + "Education");
         for(Education edc: educat_L){
-            ret += edc.toString();
+            System.out.println(edc.toString());
         }
-        return ret;
+
     }
 }
